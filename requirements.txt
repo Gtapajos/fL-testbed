@@ -1,0 +1,8 @@
+flwr==1.33.0
+numpy>=1.26,<3
+pandas>=2.2,<3
+matplotlib>=3.8,<4
+--extra-index-url https://download.pytorch.org/whl/cpu
+# The notebook kernel does not import torch; it only runs inside the Linux containers.
+# PyTorch publishes no "+cpu" wheels for macOS, so it is skipped there.
+torch==2.10.0+cpu ; sys_platform != "darwin"

@@ -1,0 +1,13 @@
+name: fl-pumba-tutorial
+
+services:
+  server:
+    build: .
+    image: fl-pumba-tutorial-flower:1.33.0
+    container_name: fl-pumba-tutorial-server
+    networks:
+      - workshop
+
+networks:
+  workshop:
+    name: fl-pumba-tutorial-net
